@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Item, StreamServiceService } from '../../services/stream-service.service';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-details',
@@ -7,7 +10,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsPage implements OnInit {
 
-  constructor() { }
+  item: Item
+
+  constructor(private service: StreamServiceService, private route: ActivatedRoute) { }
 
   ngOnInit() {
   }
