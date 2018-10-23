@@ -40,4 +40,8 @@ export class StreamServiceService {
       })
     )
    }
+
+   getItem(id) {
+     return this.itemsCollection.doc<Item>(id).valueChanges()
+   }
 }
