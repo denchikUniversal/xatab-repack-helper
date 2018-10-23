@@ -12,9 +12,22 @@ export class DetailsPage implements OnInit {
 
   item: Item
 
+  itemId = null;
+  name: string;
+
   constructor(private service: StreamServiceService, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.itemId = this.route.snapshot.params['id']
+    if (this.itemId) {
+      this.loadItem()
+    }
+  }
+
+  loadItem() {
+    this.service.getItem(this.itemId).subscribe(res => {
+      this.item = res;
+    })
   }
 
 }
