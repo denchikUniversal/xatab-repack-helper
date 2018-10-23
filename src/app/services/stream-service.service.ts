@@ -24,10 +24,10 @@ export interface Item {
 })
 export class StreamServiceService {
 
-  private itemsCollection: AngularFirestoreCollection<Item>
-  private items: Observable<Item[]>
+   itemsCollection: AngularFirestoreCollection<Item>
+   items: Observable<Item[]>
 
-  constructor(private db: AngularFirestore) {
+  constructor(public db: AngularFirestore) {
     this.itemsCollection = db.collection<Item>('items')
 
     this.items = this.itemsCollection.snapshotChanges().pipe(
@@ -39,6 +39,10 @@ export class StreamServiceService {
         })
       })
     )
+   }
+
+   getItems() {
+     return this.items;
    }
 
    getItem(id) {
