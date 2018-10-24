@@ -14,7 +14,8 @@ export class HomePage implements OnInit{
   }
 
   ngOnInit() {
-    this.service.getItems().subscribe(res => {
+    this.service.getItems()
+    .subscribe(res => {
       this.items = res;
     })
   }

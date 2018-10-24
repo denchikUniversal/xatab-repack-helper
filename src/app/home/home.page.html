@@ -1,5 +1,5 @@
 <ion-content padding>
-  <ion-card *ngFor="let item of items" [routerLink]="['/details', item.id]">
+  <ion-card *ngFor="let item of items">
     <img [src]="item.imgUrl"/>
     <ion-card-content>
       <ion-card-title>
@@ -7,6 +7,7 @@
         </ion-card-title>
       <p>
         <ion-button [routerLink]="['/details', item.id]">Детальнее</ion-button>
+      </p>
     </ion-card-content>
 </ion-card>
 </ion-content>

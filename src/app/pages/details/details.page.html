@@ -1,11 +1,24 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>details</ion-title>
+    <ion-title>{{item.name}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
   <div>
-    {{item.name}}
+    <img [src]="item.imgUrl" alt="">
+    <ul>
+      <li>{{item.name}}</li>
+      <li>{{item.voice}}</li>
+      <li>{{item.interface}}</li>
+      <li>{{item.processor}}</li>
+      <li>{{item.video}}</li>
+      <li>{{item.hdd}}</li>
+      <li>{{item.ddr}}</li>
+      <li>{{item.developer}}</li>
+      <li>{{item.pill}}</li>
+      <li>{{item.descr}}</li>
+      <li>{{item.warn}}</li>
+    </ul>
   </div>
 </ion-content>

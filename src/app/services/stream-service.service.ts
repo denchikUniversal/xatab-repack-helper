@@ -17,6 +17,9 @@ export interface Item {
   processor: string;
   type: string;
   video: string;
+  interface: string;
+  voice: string;
+  warn: string;
 }
 
 @Injectable({
@@ -37,7 +40,7 @@ export class StreamServiceService {
           const id = a.payload.doc.id;
           return { id, ...data }
         })
-      })
+      })      
     )
    }
 

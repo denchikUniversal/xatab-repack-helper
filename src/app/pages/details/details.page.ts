@@ -13,7 +13,9 @@ export class DetailsPage implements OnInit {
   item: Item
 
   itemId = null;
+
   name: string;
+
 
   constructor(private service: StreamServiceService, private route: ActivatedRoute) { }
 
