@@ -6,20 +6,27 @@
 
 <ion-content padding>
   <div>
-    <img [src]="item.imgUrl" alt="">
+    <img [src]="item.imgUrl" alt="{{item.name}}">
     <ul>
-      <li>{{item.name}}</li>
-      <li>{{item.date}}</li>
-      <li>{{item.voice}}</li>
-      <li>{{item.interface}}</li>
-      <li>{{item.processor}}</li>
-      <li>{{item.video}}</li>
-      <li>{{item.hdd}}</li>
-      <li>{{item.ddr}}</li>
-      <li>{{item.developer}}</li>
-      <li>{{item.pill}}</li>
-      <li>{{item.descr}}</li>
-      <li>{{item.warn}}</li>
+
+      <li><span>Описание: </span>{{item.descr}}</li>
+      <li><span>Название: </span> {{item.name}}</li>
+      <li><span>Год выпуска: </span> {{item.date}}</li>
+      <li><span>Разработчик: </span> {{item.developer}}</li>
+      <li><span>Язык озвучки: </span> {{item.voice}}</li>
+      <li><span>Язык интерфейса: </span> {{item.interface}}</li>
+      <li><span>Таблэтка: </span> {{item.pill}}</li>
+
+      <div style="margin: 15px 0;">
+        <p class="description">Системные требования:</p>
+        <li><span>Процессор: </span> {{item.processor}}</li>
+        <li><span>Видеокарта: </span> {{item.video}}</li>
+        <li><span>Оперативная память</span> {{item.ddr}}</li>
+        <li><span>Место на диске: </span> {{item.hdd}}</li> 
+      </div>        
+
+      
+      <li *ngIf="item.warn"><span>Примечание: </span> {{item.warn}}</li>
     </ul>
   </div>
 </ion-content>

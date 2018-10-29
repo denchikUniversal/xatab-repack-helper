@@ -1,26 +1,16 @@
 <ion-content padding>
-  <!-- <ion-card  >
-    <img [src]="item.imgUrl"/>
-    <ion-card-content>
-      <ion-card-title>
-        {{item.name}}
-        </ion-card-title>
-    </ion-card-content>
-</ion-card> -->
 
-
-<ion-card *ngFor="let item of items" [routerLink]="['/details', item.id]">
+  <ion-card *ngFor="let item of items" [routerLink]="['/details', item.id]">
   <img [src]="item.imgUrl" alt="{{item.name}}"/>
   <ion-card-content>
     <ion-card-title>
       {{item.name}}
       </ion-card-title>
     <p>
-      {{item.descr  | slice:0:250}}...
+      {{item.descr | slice:0:250}}...
     </p>
   </ion-card-content>
 </ion-card>
-
 
 
 <!-- <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
