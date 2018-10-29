@@ -9,8 +9,9 @@ import { Item, StreamServiceService } from '../services/stream-service.service';
 export class HomePage implements OnInit{
   items: Item[]
 
-  constructor(private service: StreamServiceService) {
 
+  constructor(private service: StreamServiceService) {
+    
   }
 
   ngOnInit() {
@@ -19,5 +20,6 @@ export class HomePage implements OnInit{
       this.items = res;
     })
   }
+
 
 }

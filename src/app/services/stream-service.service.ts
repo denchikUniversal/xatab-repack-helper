@@ -20,6 +20,7 @@ export interface Item {
   interface: string;
   voice: string;
   warn: string;
+  date: string;
 }
 
 @Injectable({
@@ -29,6 +30,7 @@ export class StreamServiceService {
 
    itemsCollection: AngularFirestoreCollection<Item>
    items: Observable<Item[]>
+   
 
   constructor(public db: AngularFirestore) {
     this.itemsCollection = db.collection<Item>('items')

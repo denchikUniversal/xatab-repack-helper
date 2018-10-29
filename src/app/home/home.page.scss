@@ -1,1 +1,14 @@
 
+.card{
+    border: 1px solid #999;
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    .img{
+        max-width: 100%;
+        width: 50px;
+    }
+    .content{
+        text-align: center;
+    }
+}
