@@ -21,6 +21,7 @@ export interface Item {
   voice: string;
   warn: string;
   date: string;
+  added: string;
 }
 
 @Injectable({
