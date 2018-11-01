@@ -9,6 +9,8 @@ import { Item, StreamServiceService } from '../services/stream-service.service';
 export class HomePage implements OnInit{
   items: Item[]
 
+  name: string;
+
 
   constructor(private service: StreamServiceService) {
     
@@ -20,6 +22,7 @@ export class HomePage implements OnInit{
       this.items = res;
     })
   }
+
 
 
 }

@@ -10,12 +10,16 @@
     <ul>
 
       <li><span>Описание: </span>{{item.descr}}</li>
-      <li><span>Название: </span> {{item.name}}</li>
-      <li><span>Год выпуска: </span> {{item.date}}</li>
-      <li><span>Разработчик: </span> {{item.developer}}</li>
-      <li><span>Язык озвучки: </span> {{item.voice}}</li>
-      <li><span>Язык интерфейса: </span> {{item.interface}}</li>
-      <li><span>Таблэтка: </span> {{item.pill}}</li>
+
+      <p style="margin: 15px 0;">
+        <li><span>Название: </span> {{item.name}}</li>
+        <li><span>Год выпуска: </span> {{item.date}}</li>
+        <li><span>Разработчик: </span> {{item.developer}}</li>
+        <li><span>Язык озвучки: </span> {{item.voice}}</li>
+        <li><span>Язык интерфейса: </span> {{item.interface}}</li>
+        <li><span>Таблэтка: </span> {{item.pill}}</li>
+      </p>
+      
 
       <div style="margin: 15px 0;">
         <p class="description">Системные требования:</p>
@@ -26,7 +30,7 @@
       </div>        
 
       
-      <li *ngIf="item.warn"><span>Примечание: </span> {{item.warn}}</li>
+      <!-- <li *ngIf="item.warn"><span>Примечание: </span> {{item.warn}}</li> -->
     </ul>
   </div>
 </ion-content>

@@ -14,13 +14,11 @@ export class DetailsPage implements OnInit {
 
   itemId = null;
 
-  name: string;
-
 
   constructor(private service: StreamServiceService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.itemId = this.route.snapshot.params['id']
+    this.itemId = this.route.snapshot.paramMap.get('id')
     if (this.itemId) {
       this.loadItem()
     }
